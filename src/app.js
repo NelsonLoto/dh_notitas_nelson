@@ -8,6 +8,9 @@ let rutaDetail = require('./routes/detail');
 
 app.use(methodOverride('_method'));
 
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 

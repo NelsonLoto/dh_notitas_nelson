@@ -14,7 +14,7 @@ let detailController = {
             text: req.body.message
         },{
             where: {
-                id: req.params.id
+                id_note: req.params.id
             }
         }).then(function(){
             res.redirect('/')

@@ -8,14 +8,13 @@ let indexController = {
         })
     },
     create: function(req, res){
-        //db.Note.create({
-        //    title: req.body.title,
-        //    text: req.body.text
-        //})
-        //.then(function(){
-        //    res.redirect('/')
-        //})
-        res.send(req.body)
+        db.Note.create({
+            title: req.body.title,
+            text: req.body.text
+        })
+        .then(function(){
+            res.redirect('/')
+        })
     },
     destroy: function(req, res){
         db.Note.destroy({
